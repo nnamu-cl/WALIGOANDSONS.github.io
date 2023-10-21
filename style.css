@@ -3,8 +3,22 @@ html {
     box-sizing: border-box;
   }
   body{
-    background: black;
+    background-color: black;
+
   }
+
+  @font-face {
+    font-family: "Restricted_Area.";
+    src: url('./image/font/Restricted_Area.ttf') format('Restricted_Area.');
+    
+  }
+
+  @font-face {
+    font-family: "Westerion";
+    src: url('./image/font/Westerion.ttf') format('westerion');    
+  }
+
+ 
   *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -22,13 +36,43 @@ html {
     padding: 35px 15px;
     width: 100%;
   }
-
+.text_waligo, h2{
+  color: rgb(255, 255, 255);
+  font-family: "Restricted_Area.";
+  font-size: 100px;
+  z-index: 100;
+  position: absolute;
+  left: 50px;
+  top: -30px;
+}
   
-  @media screen and (max-width:1380px) , (min-width:600px) {
+ h5{
+  color: rgb(175, 175, 243);
+  font-family:"Westerion", Calibri, Tahoma, sans-serif ;
+padding-left: 370px;
+padding-top: 16px;
+z-index: 1000;
+}
+
+  @media screen and  (min-width:680px) {
     .box-container {
-      flex-direction: row
+      flex-direction: row;
+  
+
     }
   }
+  @media screen and (max-width:679px) {
+    .text_waligo{
+      display: none;
+    }
+   section, .img_waligo, img{
+      width: 13rem !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+  }
+  
   
   .box-item {
     position: relative;
@@ -150,4 +194,15 @@ html {
   -moz-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
+}
+
+section .img_waligo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ width: 13%;
+}
+section {
+  margin-top: 2%;
+  margin-bottom: 4%;
 }
